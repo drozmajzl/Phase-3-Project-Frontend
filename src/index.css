@@ -23,3 +23,7 @@ code {
   padding: 30px;
   border-radius: 15px;
 }
+
+.card_image{
+  max-width: 200px;
+}

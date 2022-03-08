@@ -8,7 +8,7 @@ function AgendaItem({name, city, opened, architect, architect_id, city_id, image
         <p>Architect: {architect.full_name}</p>
         <p>Completed: {opened}</p>
         <p>City: {city.name}</p>
-        
+        <img className="card_image" src={image_url}></img>
         </div>
     )
 }
