@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
-import './NavBar.js';
+import NavBar from './NavBar.js';
+import Agenda from './Agenda';
 import { useState, useEffect } from 'react';
 
 
@@ -17,6 +18,7 @@ function App() {
     <div id="title">
       <NavBar/>
       <h1>Build Your Own Mid-Century Modern Architectural Tour!</h1>
+      <Agenda buildings={buildings} />
     </div>
   );
 }
