@@ -23,8 +23,6 @@ let formData = {
 function handleSubmit(e) {
 	e.preventDefault()
 
-	console.log(formData)
-
 	fetch("http://localhost:9292/buildings", {
 	method: "POST",
 	headers: {
@@ -34,7 +32,6 @@ function handleSubmit(e) {
 	})
 	.then(res => res.json())
 	.then(newItem => {
-		console.log(newItem)
 	})
 }
 
@@ -133,7 +130,6 @@ let form = (
 		</form>
 	</div>
 )
-console.log(description)
     return(
         <div className="nav">
             {form}
