@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function NavBar() {
+function NavBar({ archNames }) {
 
 const [name, setName] = useState('')
 const [opened, setOpened] = useState('')
@@ -10,6 +10,7 @@ const [image, setImage] = useState('')
 const [description, setDescription] =useState('')
 
 // let formData = { name, opened, architect, city, image, description }
+
 
 let formData = {
 	"name": name,
@@ -23,17 +24,27 @@ let formData = {
 function handleSubmit(e) {
 	e.preventDefault()
 
-	fetch("http://localhost:9292/buildings", {
-	method: "POST",
-	headers: {
-		"Content-Type": "application/json"
-	},
-	body: JSON.stringify(formData)
-	})
-	.then(res => res.json())
-	.then(newItem => {
-		console.log(newItem)
-	})
+	const x = archNames.find(n => n.toLowerCase() === (architect.toLowerCase()))
+	
+	// if (x) {
+	// 	//Find the architect_id of the matching name and assign it to our formData obj
+	// }
+	// else {
+	// 	make a post request that creates a new architect with the name saved under 'x'
+	// 	and assign that architect to our new building
+	// }
+
+	// fetch("http://localhost:9292/buildings", {
+	// method: "POST",
+	// headers: {
+	// 	"Content-Type": "application/json"
+	// },
+	// body: JSON.stringify(formData)
+	// })
+	// .then(res => res.json())
+	// .then(newItem => {
+	// 	console.log(newItem)
+	// })
 }
 
 
@@ -104,7 +115,6 @@ let form = (
 		</form>
 	</div>
 )
-console.log(description)
     return(
         <div className="nav">
             {form}

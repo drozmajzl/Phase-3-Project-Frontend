@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [buildings, setBuildings] = useState([])
+  const archNames = [] 
+  const cityNames = []
 
   useEffect(() => {
     fetch("http://localhost:9292/buildings")
@@ -14,9 +16,17 @@ function App() {
       .then((b) => setBuildings(b));
   }, []);
 
+  
+  
+  buildings.forEach(c => {
+    if (!archNames.includes(c.architect.full_name)){
+      archNames.push(c.architect.full_name)
+    }
+  })
+
   return (
     <div id="title">
-      <NavBar/>
+      <NavBar archNames={archNames}/>
       <h1>Build Your Own Mid-Century Modern Architectural Tour!</h1>
       <Agenda buildings={buildings} />
     </div>

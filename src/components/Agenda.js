@@ -3,8 +3,6 @@ import AgendaItem from "./AgendaItem";
 
 function Agenda( { buildings } ){
 
-console.log(buildings)
-
     const displayItem = buildings.map(b => {
         return(
             <AgendaItem 
