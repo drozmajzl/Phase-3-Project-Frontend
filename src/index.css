@@ -38,3 +38,17 @@ code {
   border-radius: 15px;
   margin-bottom: 20px;
 }
+
+.info-container{
+  border: 2px solid white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.info-box{
+  border: 2px solid white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}

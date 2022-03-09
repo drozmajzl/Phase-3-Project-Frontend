@@ -4,16 +4,37 @@ function Info() {
     let architect_id;
     const [ architect, setArchitect ] = useState('')
     const [ info, setInfo ] = useState({})
+    const locations =[]
 
     function handleSubmit() {
-        fetch(`http://localhost:9292//architects/${architect}/info`)
+        fetch(`http://localhost:9292/architects/${architect}/info`)
             .then((r) => r.json())
             .then((b) => setInfo(b));
+
     }
+    
+            if (info.locations)
+            {
+                info.locations.forEach(c => {
+                if (!locations.includes(c)){
+                  locations.push(c)
+                }
+              })
+            }
+        
+    const displayInfo = (
+        <div>
+            <p>Number of Buildings: {info.number}</p>
+            <p>Building Locations: {locations.join(", ")}</p>
+            <p>Oldest Building (Year Built): {info.oldest}</p>
+            <p>Most Recent Building (Year Built): {info.newest}</p>
+        </div>
+    )
 
     let form = (
         <div className="info-container">
-            <label>Info</label>
+            <label>Architect Details</label>
+            <br></br>
                 <select name="category" className="dropdown" value={architect} onChange={(e) => setArchitect(e.target.value)}>
                     <option value="select">Select architect...</option>
                     <option value="1">Albert Frey</option>
@@ -34,13 +55,14 @@ function Info() {
 					<option value="16">William Pereira</option>
                 </select>
             <br></br>
-            <button className="button" type="submit" onClick={handleSubmit}>Submit</button>
+            <button className="button" type="submit" onClick={handleSubmit}>Get Details!</button>
         </div>
     )
 
     return (
-        <div>
+        <div className="info-box">
             {form}
+            {displayInfo}
         </div>
     )
 }
