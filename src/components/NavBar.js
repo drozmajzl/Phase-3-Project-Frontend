@@ -14,14 +14,16 @@ const [description, setDescription] =useState('')
 let formData = {
 	"name": name,
 	"opened": opened,
-	"architect": architect,
-	"city": city,
-	"image":  image ? image:'https://m.psecn.photoshelter.com/img-get/I0000AJkdFdU3w8E/s/1000?1646725782',
+	"architect_id": architect,
+	"city_id": city,
+	"image_url":  image ? image:'https://m.psecn.photoshelter.com/img-get/I0000AJkdFdU3w8E/s/1000?1646725782',
 	"description": description
 }
 
 function handleSubmit(e) {
 	e.preventDefault()
+
+	console.log(formData)
 
 	fetch("http://localhost:9292/buildings", {
 	method: "POST",
@@ -85,7 +87,6 @@ let form = (
                 </select>
             <br></br>
 		</form>
-		
 		<form className='form' onSubmit={handleSubmit}>
 			<label htmlFor='Form'>Building Name</label>
 			<input
