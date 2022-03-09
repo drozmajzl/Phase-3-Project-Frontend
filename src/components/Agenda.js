@@ -1,7 +1,7 @@
 import React from "react";
 import AgendaItem from "./AgendaItem";
 
-function Agenda( { buildings, handleDelete } ){
+function Agenda( { buildings, handleDelete} ){
 
     const displayItem = buildings.map(b => {
         return(
@@ -18,6 +18,7 @@ function Agenda( { buildings, handleDelete } ){
                 description={b.description}
                 id={b.id}
                 handleDelete={handleDelete}
+
             />
         )
     })

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function NavBar() {
+function NavBar({handleAddBuilding}) {
 
 const [name, setName] = useState('')
 const [opened, setOpened] = useState('')
@@ -22,7 +22,23 @@ let formData = {
 
 function handleSubmit(e) {
 	e.preventDefault()
-
+	switch (true) {
+		case (formData.name.length < 1):
+			alert("Please enter the building name.");
+			break;
+		case (!formData.architect_id || formData.architect_id === "select"):
+			alert("Please select an architect.");
+			break;
+		case (!formData.city_id || formData.city_id === "select"):
+			alert("Please select the city.");
+			break;
+		case (formData.opened.length < 1):
+			alert("Please enter the building's date of completion.");
+			break;
+		case (formData.description.length < 1):
+			alert("Please enter a description.");
+			break;
+		default:
 	fetch("http://localhost:9292/buildings", {
 	method: "POST",
 	headers: {
@@ -33,6 +49,17 @@ function handleSubmit(e) {
 	.then(res => res.json())
 	.then(newItem => {
 	})
+	handleAddBuilding()
+	alert("Submitted!");
+
+	setName('');
+	setOpened('');
+	setArchitect('');
+	setCity('');
+	setDescription('');
+	setImage('');
+
+	}
 }
 
 let form = (
@@ -136,7 +163,5 @@ let form = (
         </div>
     )
 }
-
-
 
 export default NavBar;

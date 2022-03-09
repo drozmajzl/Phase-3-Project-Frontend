@@ -16,6 +16,12 @@ function App() {
       .then((b) => setBuildings(b));
   }, []);
 
+  function handleAddBuilding(){
+    fetch("http://localhost:9292/buildings")
+      .then((r) => r.json())
+      .then((b) => setBuildings(b.reverse()));
+  }
+
   function handleDelete(b){
     const revisedList = buildings.filter(building => building.id !== b);
     fetch(`http://localhost:9292/buildings/${b}`, {
@@ -32,8 +38,8 @@ function App() {
 
   return (
     <div id="title">
-      <NavBar archNames={archNames}/>
-      <h1>Build Your Own Mid-Century Modern Architectural Tour!</h1>
+      <h1 id="app_title">Build Your Own Mid-Century Modern Architectural Tour!</h1>
+      <NavBar archNames={archNames} handleAddBuilding={handleAddBuilding}/>
       <Agenda buildings={buildings} handleDelete={handleDelete} />
     </div>
   );
