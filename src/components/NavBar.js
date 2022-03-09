@@ -42,48 +42,48 @@ let form = (
 			<label>Architect:</label>
                 <select name="category" className="dropdown" value={architect} onChange={(e) => setArchitect(e.target.value)}>
                     <option value="select">Select architect...</option>
-                    <option value="Albert Frey">Albert Frey</option>
-                    <option value="Alvar Aalto">Alvar Aalto</option>
-                    <option value="Arne Jacobsen">Arne Jacobsen</option>
-                    <option value="Charles and Ray Eames">Charles and Ray Eames</option>
-                    <option value="E. Stewart Williams">E. Stewart Williams</option>
-					<option value="Eero Saarinen">Eero Saarinen</option>
-					<option value="Frank Lloyd Wright">Frank Lloyd Wright</option>
-					<option value="Gerrit Rietveld">Gerrit Rietveld</option>
-					<option value="Ludwig Mies Van Der Rohe">Ludwig Mies Van Der Rohe</option>
-					<option value="Marcel Breuer">Marcel Breuer</option>
-					<option value="Oscar Niemeyer">Oscar Niemeyer</option>
-					<option value="Paul R Williams">Paul R Williams</option>
-					<option value="Pierre Koenig">Pierre Koenig</option>
-					<option value="Walter Gropius">Walter Gropius</option>
-					<option value="William Pereira">William Pereira</option>
+                    <option value="1">Albert Frey</option>
+                    <option value="2">Alvar Aalto</option>
+                    <option value="3">Arne Jacobsen</option>
+                    <option value="4">Charles and Ray Eames</option>
+                    <option value="5">E. Stewart Williams</option>
+					<option value="6">Eero Saarinen</option>
+					<option value="7">Frank Lloyd Wright</option>
+					<option value="8">Gerrit Rietveld</option>
+					<option value="9">Le Corbusier</option>
+					<option value="10">Ludwig Mies Van Der Rohe</option>
+					<option value="11">Marcel Breuer</option>
+					<option value="12">Oscar Niemeyer</option>
+					<option value="13">Paul R Williams</option>
+					<option value="14">Pierre Koenig</option>
+					<option value="15">Walter Gropius</option>
+					<option value="16">William Pereira</option>
                 </select>
             <br></br>
 			<label>City:</label>
                 <select name="category" className="dropdown" value={city} onChange={(e) => setCity(e.target.value)}>
                     <option value="select">Select city...</option>
-					<option value="Berlin">Berlin</option>
-					<option value="Bologna">Bologna</option>
-					<option value="Brasília">Brasília</option>
-					<option value="Curitiba">Curitiba</option>
-					<option value="Dessau-Roßlau">Dessau-Roßlau</option>
-					<option value="Dulles">Dulles</option>
-					<option value="Helsinki">Helsinki</option>
-					<option value="Irvine">Irvine</option>
-					<option value="Los Angeles">Los Angeles</option>
-					<option value="Mill Run">Mill Run</option>
-					<option value="New York City">New York City</option>
-					<option value="Oak Park">Oak Park</option>
-                    <option value="Palm Springs">Palm Springs</option>
-					<option value="Plano">Plano</option>
-                    <option value="Riola">Riola</option>
-                    <option value="Skovshoved">Skovshoved</option>
-					<option value="St. Louis">St. Louis</option>
-					<option value="Utrecht">Utrecht</option>
-					<option value="West Hollywood">West Hollywood</option>
+					<option value="13">Berlin</option>
+					<option value="12">Bologna</option>
+					<option value="16">Brasília</option>
+					<option value="15">Curitiba</option>
+					<option value="18">Dessau-Roßlau</option>
+					<option value="6">Dulles</option>
+					<option value="2">Helsinki</option>
+					<option value="19">Irvine</option>
+					<option value="5">Los Angeles</option>
+					<option value="9">Mill Run</option>
+					<option value="7">New York City</option>
+					<option value="10">Oak Park</option>
+                    <option value="1">Palm Springs</option>
+					<option value="14">Plano</option>
+                    <option value="3">Riola</option>
+                    <option value="4">Skovshoved</option>
+					<option value="8">St. Louis</option>
+					<option value="11">Utrecht</option>
+					<option value="17">West Hollywood</option>
                 </select>
             <br></br>
-
 		</form>
 		
 		<form className='form' onSubmit={handleSubmit}>
