@@ -3,6 +3,7 @@ import '../App.css';
 import NavBar from './NavBar.js';
 import Agenda from './Agenda';
 import Info from './Info';
+import CitiesInfo from './CitiesInfo';
 import { useState, useEffect } from 'react';
 
 
@@ -40,6 +41,7 @@ function App() {
   return (
     <div id="title">
       <Info />
+      <CitiesInfo />
       <h1 id="app_title">Build Your Own Mid-Century Modern Architectural Tour!</h1>
       <NavBar archNames={archNames} handleAddBuilding={handleAddBuilding}/>
       <Agenda buildings={buildings} handleDelete={handleDelete} />
