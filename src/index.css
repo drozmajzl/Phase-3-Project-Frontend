@@ -7,7 +7,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
+  font-size: 20px;
   color: black;
 }
 
@@ -85,24 +86,35 @@ body {
 
 /* Home | Add a building page*/
 .building_container{
-  
   border: 1px solid black;
   padding: 30px;
   border-radius: 15px;
   background: #d9d7ce;
   justify-content: center;
   margin-bottom: 20px;
+  display: block;
+  
+  /* block-size: fit-content */
+}
+
+.text_div {
+  float: left;
+  max-width: 400px;
+  max-height: 200px;
+  /* display: inline-block; */
 }
 
 .card_image{
-  max-width: 400px;
-  display: block;
-  position: relative;
-  justify-content: center;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: middle;
+  
+  
+  /* justify-content: center; */
   border-radius: 10px;
   border: 2px solid #ccc;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 80px;
+  margin-right: 10px;
 }
 
 /*Info page*/
