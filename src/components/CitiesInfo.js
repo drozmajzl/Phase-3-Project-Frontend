@@ -10,13 +10,13 @@ const [info, setInfo] = useState({})
             .then((b) => setInfo(b));
     }
 
-    console.log(info)
 
     let detailDisplay = (<div></div>)
     let displayInfo = (<div></div>)
     let oneBuilding = (<div></div>)
 
     if (info){
+      
         detailDisplay= (<div>
         <p>Oldest Building (Year Built): {info.oldest} </p>
         <p>Most Recent Building (Year Built): {info.newest}</p>
@@ -29,14 +29,21 @@ const [info, setInfo] = useState({})
             )
     }
 
+    // 
+
     if (info.city_buildings){
+        
+        const x = info.city_buildings.map((o) => 
+            <ul key={o.architect_name}>
+                <li>Architect: {o.architect_name}</li>
+                <li>Buildings: {o.buildings.join(", ")}</li>
+            </ul>
+        )
+
     displayInfo = (
         <div>
             <p>Buildings in the City:</p>
-            {/* <ul>
-                <li>Architect:</li>
-                <li>Builings:</li>
-            </ul> */}
+         {x}
         {info.city_buildings.length === 1 ? oneBuilding : detailDisplay}
     </div>
     )
