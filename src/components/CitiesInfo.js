@@ -29,8 +29,6 @@ const [info, setInfo] = useState({})
             )
     }
 
-    // 
-
     if (info.city_buildings){
         
         const x = info.city_buildings.map((o) => 
