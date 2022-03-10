@@ -10,9 +10,7 @@ function Info() {
         fetch(`http://localhost:9292/architects/${architect}/info`)
             .then((r) => r.json())
             .then((b) => setInfo(b));
-
     }
-    
             if (info.locations)
             {
                 info.locations.forEach(c => {

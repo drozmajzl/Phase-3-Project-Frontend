@@ -1,6 +1,6 @@
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import React from 'react';
-import '../App.css';
+import '../index.css';
 import AddBuilding from './AddBuilding';
 import Agenda from './Agenda';
 import Info from './Info';

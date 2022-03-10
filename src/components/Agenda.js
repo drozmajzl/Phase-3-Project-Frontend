@@ -18,13 +18,13 @@ function Agenda( { buildings, handleDelete} ){
                 description={b.description}
                 id={b.id}
                 handleDelete={handleDelete}
-
             />
         )
     })
     
     return(
         <div className="card_container">
+            <h4>Your Mid-Century Modern Buildings</h4>
             {displayItem}
         </div>
     )

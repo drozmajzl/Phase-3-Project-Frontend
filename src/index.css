@@ -1,5 +1,64 @@
+/* Pulled from legacy App.css*/
+#title {
+
+  /* background-size: auto; */
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+#app_title{
+  text-align: center;
+}
+
+/* Nav */
+nav {
+  padding: 15px 0px 15px 0px;
+  height: 40px;
+}
+
+/* CSS */
+.button-35 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+
 body {
   background-image: url('https://m.psecn.photoshelter.com/img-get2/I00001_IO93.9hPY/fit=4000x3000/g=G0000ETDyWuj2a4U/TWA-Sections.jpg');
+  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,54 +68,59 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
     
-}
+} */
 
 .card_container{
+  width: 75%;
   border: 2px solid black;
   padding: 30px;
   border-radius: 15px;
   color:black;
-  background: #d9d7ce;
+  background: white;
 }
 
+/* Home | Add a building page*/
 .building_container{
-  border: 2px solid black;
+  
+  border: 1px solid black;
   padding: 30px;
   border-radius: 15px;
   background: #d9d7ce;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .card_image{
-  max-width: 200px;
+  max-width: 400px;
+  display: block;
+  position: relative;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#app_title{
-  text-align: center;
-}
-
-.nav{
-  border: 2px solid black;
-  padding: 30px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
-
+/*Info page*/
 .info-container{
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 30px;
   border-radius: 15px;
-  margin-bottom: 20px;
-  background: black;
+  background: #d9d7ce;
+  color: black;
 }
 
 .info-box{
-  border: 2px solid white;
+  width: 75%;
+  border: 2px solid black;
   padding: 30px;
   border-radius: 15px;
   margin-bottom: 20px;
-  background: black;
+  background: #d9d7ce;
 }
+
+

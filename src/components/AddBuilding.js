@@ -158,7 +158,7 @@ let form = (
 	</div>
 )
     return(
-        <div className="nav">
+        <div className="info-box">
             {form}
         </div>
     )

@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 
 function NavBar() {
   return (
-    <nav>
-      <NavLink to="/" exact>Home</NavLink>
-      <NavLink to="/info">Info</NavLink>
-      <NavLink to="/add">Add a Building</NavLink>
+    <nav className="navBar">
+      <NavLink className="button-35" to="/" exact>Home</NavLink>
+      <NavLink className="button-35" to="/info">Info</NavLink>
+      <NavLink className="button-35" to="/add">Add a Building</NavLink>
     </nav>
   )
 }
