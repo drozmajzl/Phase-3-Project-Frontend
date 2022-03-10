@@ -1,5 +1,6 @@
 #title {
-  background-color: #282c34;
+
+  /* background-size: auto; */
   min-height: 20vh;
   display: flex;
   flex-direction: column;

@@ -1,4 +1,6 @@
 body {
+  background-image: url('https://m.psecn.photoshelter.com/img-get2/I00001_IO93.9hPY/fit=4000x3000/g=G0000ETDyWuj2a4U/TWA-Sections.jpg');
+  background-repeat: no-repeat;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,18 +12,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    
 }
 
 .card_container{
-  border: 2px solid white;
+  border: 2px solid black;
   padding: 30px;
   border-radius: 15px;
+  color:black;
+  background: #d9d7ce;
 }
 
 .building_container{
-  border: 2px solid white;
+  border: 2px solid black;
   padding: 30px;
   border-radius: 15px;
+  background: #d9d7ce;
 }
 
 .card_image{
@@ -33,17 +39,18 @@ code {
 }
 
 .nav{
-  border: 2px solid white;
+  border: 2px solid black;
   padding: 30px;
   border-radius: 15px;
   margin-bottom: 20px;
 }
 
 .info-container{
-  border: 2px solid white;
+  border: 2px solid black;
   padding: 30px;
   border-radius: 15px;
   margin-bottom: 20px;
+  background: black;
 }
 
 .info-box{
@@ -51,4 +58,5 @@ code {
   padding: 30px;
   border-radius: 15px;
   margin-bottom: 20px;
+  background: black;
 }
