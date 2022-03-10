@@ -7,9 +7,11 @@ function Info() {
     const locations =[]
 
     function handleSubmit() {
+        if (architect != "select" && architect != ""){
         fetch(`http://localhost:9292/architects/${architect}/info`)
             .then((r) => r.json())
             .then((b) => setInfo(b));
+        }
     }
             if (info.locations)
             {
@@ -31,8 +33,7 @@ function Info() {
 
     let form = (
         <div className="info-container">
-            <label>Architect Details</label>
-            <br></br>
+            <h3>Architect Details</h3>
                 <select name="category" className="dropdown" value={architect} onChange={(e) => setArchitect(e.target.value)}>
                     <option value="select">Select architect...</option>
                     <option value="1">Albert Frey</option>
@@ -53,14 +54,15 @@ function Info() {
 					<option value="16">William Pereira</option>
                 </select>
             <br></br>
-            <button className="button" type="submit" onClick={handleSubmit}>Get Details!</button>
+            <br></br>
+            <button className="button-35" type="submit" onClick={handleSubmit}>Get Details!</button>
         </div>
     )
 
     return (
         <div className="info-box">
             {form}
-            {displayInfo}
+            {info.locations ? displayInfo : null}
         </div>
     )
 }

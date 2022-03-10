@@ -64,8 +64,9 @@ function handleSubmit(e) {
 
 let form = (
 	<div className='form-container'>
-		<form>
+		<form className="add-form">
 			<label>Architect:</label>
+			<br></br>
                 <select name="category" className="dropdown" value={architect} onChange={(e) => setArchitect(e.target.value)}>
                     <option value="select">Select architect...</option>
                     <option value="1">Albert Frey</option>
@@ -87,6 +88,7 @@ let form = (
                 </select>
             <br></br>
 			<label>City:</label>
+			<br></br>
                 <select name="category" className="dropdown" value={city} onChange={(e) => setCity(e.target.value)}>
                     <option value="select">Select city...</option>
 					<option value="13">Berlin</option>
@@ -112,7 +114,8 @@ let form = (
             <br></br>
 		</form>
 		<form className='form' onSubmit={handleSubmit}>
-			<label htmlFor='Form'>Building Name</label>
+			<label htmlFor='Form'>Building Name:</label>
+			<br></br>
 			<input
 				className="name"
 				type="text"
@@ -122,7 +125,8 @@ let form = (
 				onChange={e => setName(e.target.value)}
 			/>
 			<br></br>
-			<label htmlFor='Form'>Opened</label>
+			<label htmlFor='Form'>Opened:</label>
+			<br></br>
 			<input
 				className="name"
 				type="text"
@@ -131,9 +135,10 @@ let form = (
 				placeholder="Year..."
 				onChange={e => setOpened(e.target.value)}
 			/>
+			
 			<br></br>
+			<label htmlFor='Form'>Image:</label>
 			<br></br>
-			<label htmlFor='Form'>Image</label>
 			<input
 				className="name"
 				type="text"
@@ -143,7 +148,8 @@ let form = (
 				onChange={e => setImage(e.target.value)}
 			/>
 			<br></br>
-			<label htmlFor='Form'>Description</label>
+			<label htmlFor='Form'>Description:</label>
+			<br></br>
 			<input
 				className="name"
 				type="text"
@@ -153,12 +159,14 @@ let form = (
 				onChange={e => setDescription(e.target.value)}
 			/>
 			<br></br>
-			<input type="submit"></input>
+			<br></br>
+			<input className="button-35" type="submit"></input>
 		</form>
 	</div>
 )
     return(
         <div className="info-box">
+			<h3>Add a Building!</h3>
             {form}
         </div>
     )

@@ -5,9 +5,11 @@ const [city, setCity] = useState('')
 const [info, setInfo] = useState({})
 
     function handleSubmit() {
+        if (city != "select" && city != ""){
         fetch(`http://localhost:9292/cities/${city}/info`)
             .then((r) => r.json())
             .then((b) => setInfo(b));
+        }
     }
 
 
@@ -33,14 +35,14 @@ const [info, setInfo] = useState({})
         
         const x = info.city_buildings.map((o) => 
             <ul key={o.architect_name}>
-                <li>Architect: {o.architect_name}</li>
-                <li>Buildings: {o.buildings.join(", ")}</li>
+                <p>Architect: {o.architect_name}</p>
+                <p>Buildings: {o.buildings.join(", ")}</p>
             </ul>
         )
 
     displayInfo = (
         <div>
-            <p>Buildings in the City:</p>
+            <h3>Buildings in the City:</h3>
          {x}
         {info.city_buildings.length === 1 ? oneBuilding : detailDisplay}
     </div>
@@ -50,8 +52,7 @@ const [info, setInfo] = useState({})
 
     let form = (
         <div className="info-container">
-            <label>City Details</label>
-            <br></br>
+            <h3>City Details</h3>
                 <select name="category" className="dropdown" value={city} onChange={(e) => setCity(e.target.value)}>
                 <option value="select">Select city...</option>
 					<option value="13">Berlin</option>
@@ -75,7 +76,8 @@ const [info, setInfo] = useState({})
 					<option value="17">West Hollywood</option>
                 </select>
             <br></br>
-            <button className="button" type="submit" onClick={handleSubmit}>Get Details!</button>
+            <br></br>
+            <button className="button-35" type="submit" onClick={handleSubmit}>Get Details!</button>
         </div>
     )
 

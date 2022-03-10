@@ -12,7 +12,7 @@ function AgendaItem({handleDelete, name, city, opened, architect, architect_id, 
             </div>
            
             <img className="card_image" src={image_url}></img>
-            <button id="delete_button" onClick={()=>handleDelete(id)}>Delete</button>
+            <button className="button-35" id="delete_button" onClick={()=>handleDelete(id)}>Delete</button>
         </div>
     )
 }

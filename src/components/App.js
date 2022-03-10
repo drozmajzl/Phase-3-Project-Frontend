@@ -48,6 +48,7 @@ function App() {
           <Agenda buildings={buildings} handleDelete={handleDelete} />
         </Route >
         <Route path="/info">
+          <h2>See Data on Architects and Cities!</h2>
           <Info />
           <CitiesInfo />
         </Route>
